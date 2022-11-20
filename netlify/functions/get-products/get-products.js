@@ -31,11 +31,6 @@ const handler = async (event) => {
     .catch(function (error) {
       return { statusCode: 500, body: error.toString() }
     });
-
-  return {
-    statusCode: 200,
-    body: JSON.stringify(response),
-  }
 }
 
 module.exports = { handler }

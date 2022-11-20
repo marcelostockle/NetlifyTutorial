@@ -1,5 +1,5 @@
 
-<form id="form-top" method="post" action="https://courageous-baklava-53ca54.netlify.app/.netlify/functions/post-order" novalidate="novalidate">
+<form id="form-top" method="post" action="/.netlify/functions/post-order">
   <p>
     <label for="client">Cliente (requerido)</label>
     <input id="client" name="client" type="text" minlength="2" required>
@@ -18,15 +18,15 @@
   </p>
   <p>
     <label for="amount-sale">Monto venta (requerido)</label>
-    <input id="amount-sale" name="amount-sale" type="number" min="0" required>
+    <input id="amount-sale" name="amount-sale" type="number" min="0" value="0" required>
   </p>
   <p>
     <label for="amount-fees">Monto extra</label>
-    <input id="amount-fees" name="amount-fees" type="number" min="0">
+    <input id="amount-fees" name="amount-fees" type="number" min="0" value="0">
   </p>
   <p>
     <label for="amount-paid">Monto adelantado</label>
-    <input id="amount-paid" name="amount-sale" type="number" min="0">
+    <input id="amount-paid" name="amount-paid" type="number" min="0" value="0">
   </p>
   <input type="submit" value="Aceptar">
 </form>

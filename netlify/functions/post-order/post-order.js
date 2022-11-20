@@ -2,6 +2,8 @@ const axios = require('axios')
 
 const handler = async function (event) {
   try {
+    console.log("DEBUGGING post-order")
+    console.log(event.body)
     const axios = require('axios')
     const data = JSON.stringify({
       "collection": "Order",
@@ -9,7 +11,6 @@ const handler = async function (event) {
       "dataSource": "Cluster0",
       "document": JSON.parse(event.body).payload
     })
-    console.log(JSON.parse(event.body).payload)
     
     const config = {
       method: 'post',

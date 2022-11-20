@@ -1,0 +1,36 @@
+
+<form id="form-top" method="post" action="https://courageous-baklava-53ca54.netlify.app/.netlify/functions/post-order" novalidate="novalidate">
+  <p>
+    <label for="client">Cliente (requerido)</label>
+    <input id="client" name="client" type="text" minlength="2" required>
+  </p>
+  <p>
+    <label for="receives">Recibe</label>
+    <input id="receives" name="receives" type="text" minlength="2" required>
+  </p>
+  <p>
+    <label for="dir">Dirección (no requerido)</label>
+    <input id="dir" name="direction" type="text">
+  </p>
+  <p>
+    <label for="dir-comment">Dirección: Comentarios (no requerido)</label>
+    <input id="dir-comment" name="dir-comment" type="text">
+  </p>
+  <p>
+    <label for="amount-sale">Monto venta (requerido)</label>
+    <input id="amount-sale" name="amount-sale" type="number" min="0" required>
+  </p>
+  <p>
+    <label for="amount-fees">Monto extra</label>
+    <input id="amount-fees" name="amount-fees" type="number" min="0">
+  </p>
+  <p>
+    <label for="amount-paid">Monto adelantado</label>
+    <input id="amount-paid" name="amount-sale" type="number" min="0">
+  </p>
+</form>
+<script>
+  $("#form-top").validate();
+</script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"/>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"/>

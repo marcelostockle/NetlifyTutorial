@@ -1,8 +1,8 @@
 {
-  "name": "get-products",
+  "name": "get-clients",
   "version": "1.0.0",
   "description": "netlify functions:create - default template for node fetch function",
-  "main": "get-products.js",
+  "main": "get-clients.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

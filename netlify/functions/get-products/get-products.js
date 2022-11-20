@@ -8,7 +8,7 @@ const handler = async (event) => {
   try {
     const database = (await clientPromise).db("dalila")
     const collection = database.collection("Product")
-    const results = collection.find({}).toArray()
+    const results = collection.find({}).sort({ category:1 }).toArray()
     return {
       statusCode: 200,
       body: JSON.stringify(results),

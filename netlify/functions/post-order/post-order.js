@@ -27,9 +27,9 @@ const handler = async function (event) {
       statusCode: 200,
       body: JSON.stringify({ msg: "Order entered successfully" })
     }
-  } catch (error) {
+  } catch (err) {
     // output to netlify function log
-    console.log(error)
+    console.log(err)
     return {
       statusCode: 500,
       body: JSON.stringify(err)

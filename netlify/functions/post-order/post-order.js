@@ -1,15 +1,16 @@
 const axios = require('axios')
+const qs = require('querystring')
 
 const handler = async function (event) {
   try {
     console.log("DEBUGGING post-order")
-    console.log(decodeURIComponent(event.body))
+    console.log(Object.fromEntries(new URLSearchParams(event.body)))
     const axios = require('axios')
     const data = JSON.stringify({
       "collection": "Order",
       "database": "dalila",
       "dataSource": "Cluster0",
-      "document": JSON.parse(decodeURIComponent(event.body))
+      "document": Object.fromEntries(new URLSearchParams(event.body))
     })
     
     const config = {

@@ -31,7 +31,13 @@
   <input type="submit" value="Aceptar">
 </form>
 <script>
-  $("#form-top").validate();
+  $("#form-top").validate({
+    submitHandler: function(form) {
+      $(form).ajaxSubmit({
+        dataType: 'json'
+      })
+    }
+  })
 </script>
 <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"/>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"/>

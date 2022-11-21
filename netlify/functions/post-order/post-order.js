@@ -3,7 +3,7 @@ const axios = require('axios')
 const handler = async function (event) {
   try {
     console.log("DEBUGGING post-order")
-    console.log(event.body)
+    console.log(JSON.stringify(event.body))
     const axios = require('axios')
     const data = JSON.stringify({
       "collection": "Order",

@@ -3,13 +3,13 @@ const axios = require('axios')
 const handler = async function (event) {
   try {
     console.log("DEBUGGING post-order")
-    console.log(JSON.stringify(event.body))
+    console.log(decodeURIComponent(event.body))
     const axios = require('axios')
     const data = JSON.stringify({
       "collection": "Order",
       "database": "dalila",
       "dataSource": "Cluster0",
-      "document": JSON.parse(event.body).payload
+      "document": JSON.parse(decodeURIComponent(event.body))
     })
     
     const config = {

@@ -1,6 +1,6 @@
 const fetch = require('node-fetch')
 
-const handler = async function () {
+const handler = async function (event, context) {
   try {
     const response = await fetch('https://icanhazdadjoke.com', {
       headers: { Accept: 'application/json' },
@@ -13,7 +13,7 @@ const handler = async function () {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({ msg: data.joke }),
+      body: JSON.stringify({ msg: data.joke, event, context }),
     }
   } catch (error) {
     // output to netlify function log
